@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTimer>
+#include <QTime>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,11 +20,18 @@ class MainWindow : public QMainWindow
   private slots:
     void update_time();
 
-    void on_pushButton_clicked();
+    void on_PB_Close_clicked();
 
     void add_random();
+    QString randString(int len);
 
-    void on_s_IntervalRandom_valueChanged(int value);
+    void on_S_IntervalRandom_valueChanged(int value);
+
+    void on_TE_MinInterval_userTimeChanged(const QTime &time);
+
+    void load();
+    void setInterval(const int &interval);
+    QTime setTimeFromInterval(const int &interval) const;
 
   private:
     Ui::MainWindow *ui;

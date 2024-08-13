@@ -14,22 +14,22 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="TE_Data">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>40</y>
+      <y>60</y>
       <width>221</width>
-      <height>361</height>
+      <height>421</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="l_timer">
+   <widget class="QLabel" name="L_Timer">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>50</y>
-      <width>291</width>
+      <x>330</x>
+      <y>60</y>
+      <width>281</width>
       <height>81</height>
      </rect>
     </property>
@@ -42,7 +42,7 @@
      <string>00:00:00</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="PB_Close">
     <property name="geometry">
      <rect>
       <x>650</x>
@@ -55,11 +55,11 @@
      <string>Закрыть</string>
     </property>
    </widget>
-   <widget class="QSlider" name="s_IntervalRandom">
+   <widget class="QSlider" name="S_IntervalRandom">
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>180</y>
+      <y>240</y>
       <width>451</width>
       <height>51</height>
      </rect>
@@ -71,19 +71,25 @@
      <number>5000</number>
     </property>
     <property name="value">
-     <number>1</number>
+     <number>1000</number>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksBothSides</enum>
+    </property>
+    <property name="tickInterval">
+     <number>500</number>
+    </property>
    </widget>
-   <widget class="QLabel" name="l_valueSlider">
+   <widget class="QLabel" name="L_ValueSlider">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>290</y>
-      <width>171</width>
-      <height>81</height>
+      <x>280</x>
+      <y>160</y>
+      <width>431</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -92,8 +98,108 @@
      </font>
     </property>
     <property name="text">
-     <string>0000000</string>
+     <string>Интервал: 0000000</string>
     </property>
+   </widget>
+   <widget class="QLabel" name="L_Data">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>16</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Текущие данные</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="L_CurrentTime">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>20</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Текущее время</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>316</y>
+      <width>353</width>
+      <height>65</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="L_MinInterval">
+         <property name="text">
+          <string>Минимальный интервал</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="TE_MinInterval">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="currentSection">
+          <enum>QDateTimeEdit::MSecSection</enum>
+         </property>
+         <property name="displayFormat">
+          <string>mm:ss:zzz</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="L_MaxInterval">
+         <property name="text">
+          <string>Максимальный интервал</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="TE_MaxInterval">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+          </font>
+         </property>
+         <property name="currentSection">
+          <enum>QDateTimeEdit::MSecSection</enum>
+         </property>
+         <property name="displayFormat">
+          <string>mm:ss:zzz</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
