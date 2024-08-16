@@ -140,36 +140,57 @@
    <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>316</y>
-      <width>353</width>
-      <height>65</height>
+      <x>253</x>
+      <y>313</y>
+      <width>468</width>
+      <height>71</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QLabel" name="L_MinInterval">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Минимальный интервал</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QTimeEdit" name="TE_MinInterval">
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="currentSection">
-          <enum>QDateTimeEdit::MSecSection</enum>
-         </property>
-         <property name="displayFormat">
-          <string>mm:ss:zzz</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QTimeEdit" name="TE_MinInterval">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="currentSection">
+            <enum>QDateTimeEdit::MSecSection</enum>
+           </property>
+           <property name="displayFormat">
+            <string>mm:ss:zzz</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>мин.сек</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>
@@ -177,25 +198,46 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLabel" name="L_MaxInterval">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Максимальный интервал</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QTimeEdit" name="TE_MaxInterval">
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="currentSection">
-          <enum>QDateTimeEdit::MSecSection</enum>
-         </property>
-         <property name="displayFormat">
-          <string>mm:ss:zzz</string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QTimeEdit" name="TE_MaxInterval">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="currentSection">
+            <enum>QDateTimeEdit::MSecSection</enum>
+           </property>
+           <property name="displayFormat">
+            <string>mm:ss:zzz</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>мин.сек</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>

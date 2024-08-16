@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
+#include <QFile>
+#include <QJsonDocument>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -33,10 +35,18 @@ class MainWindow : public QMainWindow
     void setInterval(const int &interval);
     QTime setTimeFromInterval(const int &interval) const;
 
+    void on_TE_MaxInterval_userTimeChanged(const QTime &time);
+
+    void save_json();
+    void load_json();
+
   private:
     Ui::MainWindow *ui;
     QTimer *timer;
     QTimer *timer_random;
+    QFile file;
+    QString name_file;
+    QJsonDocument json_document;
 };
 
 #endif // MAINWINDOW_H
